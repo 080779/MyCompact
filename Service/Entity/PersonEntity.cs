@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TestCompact
+namespace Service.Service
 {
     [Table("tb_persons")]
     public class PersonEntity
