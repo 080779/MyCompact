@@ -1,11 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-
-namespace Service.Service
+﻿namespace Service.Service
 {
-    [Table("tb_persons")]
-    public class PersonEntity
+    public class PersonEntity: BaseEntity
     {
-        public long Id { get; set; }
         public string Name { get; set; }
     }
 }
