@@ -20,6 +20,7 @@ namespace Service
             base.OnModelCreating(modelBuilder);
             modelBuilder.Configurations.Add<PersonEntity>(new PersonConfig());
             modelBuilder.Configurations.Add<CheckWorkEntity>(new CheckWorkConfig());
+            modelBuilder.Configurations.Add<StatEntity>(new StatConfig());
         }
         public IQueryable<T> GetAll<T>() where T : BaseEntity
         {
@@ -38,5 +39,6 @@ namespace Service
 
         public DbSet<PersonEntity> Persons { get; set; }
         public DbSet<CheckWorkEntity> CheckWorks { get; set; }
+        public DbSet<StatEntity> Stats { get; set; }
     }
 }

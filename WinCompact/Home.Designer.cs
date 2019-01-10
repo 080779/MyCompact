@@ -44,6 +44,9 @@
             this.cbType = new System.Windows.Forms.ComboBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
+            this.btnStat1 = new System.Windows.Forms.Button();
+            this.btnStat2 = new System.Windows.Forms.Button();
+            this.btnStat3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -205,11 +208,47 @@
             this.btnReset.UseVisualStyleBackColor = false;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
+            // btnStat1
+            // 
+            this.btnStat1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnStat1.Location = new System.Drawing.Point(574, 10);
+            this.btnStat1.Name = "btnStat1";
+            this.btnStat1.Size = new System.Drawing.Size(75, 23);
+            this.btnStat1.TabIndex = 10;
+            this.btnStat1.Text = "表一";
+            this.btnStat1.UseVisualStyleBackColor = false;
+            this.btnStat1.Click += new System.EventHandler(this.btnStat1_Click);
+            // 
+            // btnStat2
+            // 
+            this.btnStat2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnStat2.Location = new System.Drawing.Point(655, 10);
+            this.btnStat2.Name = "btnStat2";
+            this.btnStat2.Size = new System.Drawing.Size(75, 23);
+            this.btnStat2.TabIndex = 11;
+            this.btnStat2.Text = "表二";
+            this.btnStat2.UseVisualStyleBackColor = false;
+            this.btnStat2.Click += new System.EventHandler(this.btnStat2_Click);
+            // 
+            // btnStat3
+            // 
+            this.btnStat3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnStat3.Location = new System.Drawing.Point(736, 9);
+            this.btnStat3.Name = "btnStat3";
+            this.btnStat3.Size = new System.Drawing.Size(75, 23);
+            this.btnStat3.TabIndex = 12;
+            this.btnStat3.Text = "表三";
+            this.btnStat3.UseVisualStyleBackColor = false;
+            this.btnStat3.Click += new System.EventHandler(this.btnStat3_Click);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1114, 596);
+            this.Controls.Add(this.btnStat3);
+            this.Controls.Add(this.btnStat2);
+            this.Controls.Add(this.btnStat1);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.cbType);
@@ -243,6 +282,9 @@
         private System.Windows.Forms.ComboBox cbType;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.Button btnStat1;
+        private System.Windows.Forms.Button btnStat2;
+        private System.Windows.Forms.Button btnStat3;
     }
 }
 

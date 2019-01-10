@@ -17,6 +17,7 @@ namespace WinCompact
     public partial class Home : Form
     {
         private readonly CheckWorkService checkWorkService = new CheckWorkService();
+        private readonly StatService statService = new StatService();
         private int pageSize = 20;
         private int pageIndex = 1;
         public Home()
@@ -26,10 +27,12 @@ namespace WinCompact
 
         private void Home_Load(object sender, EventArgs e)
         {
-            cbType.DataSource = MyEnumHelper.GetEnumList<TypeEnum>();
+            var typeList= MyEnumHelper.GetEnumList<TypeEnum>();
+            cbType.DataSource = typeList;
             cbType.DisplayMember = "Name";
             cbType.ValueMember = "Id";
             cbType.SelectedIndex = 0;
+            statService.Add();
             Bind();
         }
         public void Bind()
@@ -82,6 +85,24 @@ namespace WinCompact
         private void btnReset_Click(object sender, EventArgs e)
         {
             Bind();
+        }
+
+        private void btnStat1_Click(object sender, EventArgs e)
+        {
+            Stat form = new Stat((int)TypeEnum.红线内用地1含边角地2);
+            form.ShowDialog();
+        }
+
+        private void btnStat2_Click(object sender, EventArgs e)
+        {
+            Stat form = new Stat((int)TypeEnum.三改用地1道路0水利设施改移1建2用地2);
+            form.ShowDialog();
+        }
+
+        private void btnStat3_Click(object sender, EventArgs e)
+        {
+            Stat form = new Stat((int)TypeEnum.回建地);
+            form.ShowDialog();
         }
     }
 }
