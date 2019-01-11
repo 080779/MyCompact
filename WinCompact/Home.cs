@@ -87,22 +87,20 @@ namespace WinCompact
             Bind();
         }
 
-        private void btnStat1_Click(object sender, EventArgs e)
+        private void tabcStat_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Stat form = new Stat((int)TypeEnum.红线内用地1含边角地2);
-            form.ShowDialog();
-        }
-
-        private void btnStat2_Click(object sender, EventArgs e)
-        {
-            Stat form = new Stat((int)TypeEnum.三改用地1道路0水利设施改移1建2用地2);
-            form.ShowDialog();
-        }
-
-        private void btnStat3_Click(object sender, EventArgs e)
-        {
-            Stat form = new Stat((int)TypeEnum.回建地);
-            form.ShowDialog();
+            if(tabcStat.SelectedIndex==1)
+            {
+                gridViewStats1.DataSource = statService.GetModelList((int)TypeEnum.三改用地1道路0水利设施改移1建2用地2, null,1,pageSize).List;
+            }
+            if (tabcStat.SelectedIndex == 2)
+            {
+                gridViewStats2.DataSource = statService.GetModelList((int)TypeEnum.红线内用地1含边角地2, null, 1, pageSize).List;
+            }
+            if (tabcStat.SelectedIndex == 3)
+            {
+                gridViewStats3.DataSource = statService.GetModelList((int)TypeEnum.回建地, null, 1, pageSize).List;
+            }
         }
     }
 }
